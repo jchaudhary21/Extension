@@ -1,0 +1,14 @@
+{
+    "name": "Google meet extension",
+    "version": "1.0.0",
+    "description": "Google meet extension",
+    "manifest_version": 3,
+    "author": "Sampurna Chapagain",
+    "action":{
+        "default_popup": "google_meet_extension.html",
+        "default_title": "Google meet extension" 
+    }
+
+    
+    
+}

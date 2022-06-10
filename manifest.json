@@ -1,14 +1,19 @@
 {
-    "name": "Google meet extension",
+    "name": "Test_Extension",
     "version": "1.0.0",
-    "description": "Google meet extension",
+    "description": "Test_Extension",
     "manifest_version": 3,
-    "author": "Sampurna Chapagain",
+    "author": "JC",
+    "background": {
+        "service_worker": "background.js"
+      },
     "action":{
         "default_popup": "google_meet_extension.html",
         "default_title": "Google meet extension" 
-    }
-
+    },
+    "permissions": [
+        "activeTab"
+      ]
     
     
 }

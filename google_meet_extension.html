@@ -1,120 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>GOOGLE MEET JOIN</title>
-
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <style>
-        body {
+    <script src="background.js"></script>
+<style>
+    body {
             background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149005675.jpg?size=1500&ext=jpg")
         }
-        #button_2{
-            display: none
-        }
-        .button3{
+
+    html {
+        height: 200px;  
+        width: 200px;  
+         }
+    #test_button2{
             display: none ;
         }
-
-    </style>
-</head>
-
-<body>
-
-    <img src="https://cdn.iconscout.com/icon/free/png-256/google-meet-4054246-3352988.png"
-        style="width:50px;height:50px;">
-    <h1 style="color:rgb(246, 246, 247)">GOOGLE MEET </h1>
-
-
-
-    <select name="option_select" id="option_select" onchange= "display();">
-        <option value="Join New Meet">Join New Meet</option>
-         <option value="Join through key">Join through key</option>
-    </select><br>
+    #test_button3{
+            display: none ;
+        }
+    #form{
+            display: none;
+    }
+    #form_input {
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
     
+}
+#option_select{
         
-    <div id="button_3" class="button3">
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+
+    }
+a {
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+    <img src="https://cdn.iconscout.com/icon/free/png-256/google-meet-4054246-3352988.png" style="width:50px;height:50px;">
+   <h1>GOOGLE MEET EXTENSION ! </h1>
+
+
+    <p style="color:rgb(246, 246, 247)">Select Option : </p>
+    <select name="option_select" id="option_select" >
+        
+        <option  value ="select option">Select Option</option>
+        <option value="Join New Meet">Join New Meet</option>
+        <option value="Join through key">Join through key</option>
+    </select><br>
+
     <form id="form">
-        <p for="exampleInputEmail1" style="color:rgb(246, 246, 247)" >ENTER KEY  :</p2>
-        <input type="text"  id="email">
+        <p style="color:rgb(246, 246, 247)" >ENTER KEY  :</p2>
+        <input type="text"  id="form_input">
     </form>
-    <button class="btn btn-primary" type="button"  onclick="submit_form()">Join through key</button>
-    </div>
-    
-    
-    <button  class="btn btn-primary" type="button"  id='button_1' onclick ="option_dekhle()"> Click Me!     </button>
-    <button  class="btn btn-primary" type="button"  id='button_2' onclick="open_meet('new')"> Join New Meet </button>
-    
 
 
-
+    <button  id="test_button1">Click Me</button>
+    <a href="https://meet.google.com/new" target="_blank"> <button  id="test_button2">Join New MEET</button>  </a>
+    <a href="" target="_blank" id="join_key"><button  id="test_button3">Join Through KEY</button></a>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 
 </body>
-
-<script>
-    function open_meet(key){
-        var text = "https://meet.google.com/"  
-        text = text + key;
-        window.location = text ;
-    
-    }
-    
-    function submit_form(){
-       
-        var form_content =document.getElementById("form").elements.item(0).value;
-        open_meet(form_content)
-       
-       
-    ;
-            }
-    
-    function display(){
-    
-       var option_selected =  document.getElementById("option_select").value;
-       document.getElementById("button_1").style.display = 'none';
-    
-       if (option_selected == "Join New Meet"){
-        document.getElementById("button_2").style.display = 'block';
-        document.getElementById("button_3").style.display = 'none';
-        
-       }
-       else{
-           document.getElementById("button_3").style.display = 'block';
-           document.getElementById("button_2").style.display = 'none';
-       }
-
-   
-    
-    
-    }
-
-    function option_dekhle(){
-
-        var value = Math.floor(Math.random() * 3) +1 ;
-        if(value ==1 ){
-         alert("OPTION to dekh le vro !!")
-        }
-        if(value ==2 ){
-         alert("chu chu hai kya saale option to select kr ")
-        }
-        if(value ==3 ){
-         alert("L hai kya bc option select kr ")
-        }
-       
-
-
-
-    }
-    
-    </script>
-
 </html>

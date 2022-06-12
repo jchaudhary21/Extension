@@ -7,6 +7,9 @@
     "background": {
         "service_worker": "background.js"
       },
+      "icons": {
+        "32": "Images/logo_icon_32.png"
+      },
     "action":{
         "default_popup": "google_meet_extension.html",
         "default_title": "Google meet extension" 

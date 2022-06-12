@@ -7,26 +7,58 @@
     <script src="background.js"></script>
 <style>
     body {
-            background-image: url("https://thumbs.gfycat.com/AlertMerryFugu-size_restricted.gif");
-            background-size : auto;
-        }
+            background-image: url("Images/default_background.gif");
+            background-size : 340px 1000px;
 
+        }
     html {
-        height: 255px;  
-        width: 200px;  
+        height: 240px;  
+        width: 240px;  
          }
+    #test_button1{
+
+            background-image: linear-gradient(to right, #ab23f9 0%, #7930a3  51%, #060506  100%);
+            transition: 0.5s;
+            background-size: 200% auto ;
+            color: white;            
+            border-radius: 5px;
+         
+        }
+    #test_button1:hover {
+            background-position: center center; /* change the direction of the change here */
+            color: #fff; 
+          }
     #test_button2{
-            display: none ;
+            background-image: linear-gradient(to right, #ab23f9 0%, #7930a3  51%, #060506  100%);
+            transition: 0.5s;
+            background-size: 200% auto ;
+            color: white;            
+            border-radius: 5px;
+            display : none;
         }
+     #test_button2:hover {
+            background-position: center center; /* change the direction of the change here */
+            color: #fff; 
+          }
     #test_button3{
-            display: none ;
+            background-image: linear-gradient(to right, #ab23f9 0%, #7930a3  51%, #060506  100%);
+            transition: 0.5s;
+            background-size: 200% auto ;
+            color: white;            
+            border-radius: 5px;
+            display : none;
         }
+    #test_button3:hover {
+            background-position: center center; /* change the direction of the change here */
+            color: rgb(255, 255, 255); 
+          }
     #form{
             display: none;
+            border-radius: 4px;
     }
     #form_input {
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     border-color: rgb(0, 0, 0);
     
 }
@@ -40,24 +72,28 @@
 a {
   text-decoration: none;
 }
+#image_click{
+    background-color: transparent;
+    border-color: transparent;
+
+}
 </style>
 </head>
 <body>
-    <img src="https://cdn.iconscout.com/icon/free/png-256/google-meet-4054246-3352988.png" style="width:50px;height:50px;">
+    <button id="image_click"><img src="https://cdn.iconscout.com/icon/free/png-256/google-meet-4054246-3352988.png" style="width:50px;height:50px;" ></a></button>
    <h1 align ="centre" style="color:rgb(255, 255, 255)"> GOOGLE MEET EXTENSION ! </h1>
 
 
-    <p style="color:rgb(246, 246, 247)">Select Option : </p>
+    <h7 style="color:rgb(246, 246, 247)">SELECT OPTION : </h7>
+
     <select name="option_select" id="option_select" >
-        
-        <option  value ="select option">Select Option</option>
+        <option  value ="select option">Select Option </option>
         <option value="Join New Meet">Join New Meet</option>
         <option value="Join through key">Join through key</option>
     </select><br>
 
     <form id="form">
-        <p style="color:rgb(246, 246, 247)" >ENTER KEY  :</p2>
-        <input type="text"  id="form_input">
+        <input type="text"  id="form_input" placeholder="Enter KEY">
     </form>
 
 
